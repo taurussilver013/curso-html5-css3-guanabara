@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture> <!--é possível inverter entre max e min-width-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <!--img tam P-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <!--img tam M-->
+        <img src="imagens/foto-g.png" alt="Imagem Flexível">
+        <!--img tam G-->
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+
+    <!--<audio src="midias/Guilty Crown-My Dearest_Abertura_Onsei TV.mp3" controls>Guilty Crown
+    - My Dearest_Abertura_Onsei</audio> (forma simples)
+    
+    formatos de música: MP3, WAV, OGG-->
+
+    <audio preload="metadata" controls loop>   <!--preload: auto, metadata, none-->
+        <source src="midias/My Dearest_Onsei TV.mp3" type="audio/mpeg"> <!--1°-->
+
+        <source src="midias/My Dearest_Onsei TV.wav" type="audio/wav"><!--2°-->
+        
+        <source src="midias/My Dearest_Onsei TV.ogg" type="audio/ogg"><!--3°-->
+        
+        <p>Infelizmente seu navegador não é compatível com áudio, <a href="midias/My Dearest_Onsei TV.mp3">clique aqui</a> para baixar o arquivo.</p> <!--4°-->
+    
+        <!--parâmetros p/ audio: controls, loop, autoplay-->
+
+    </audio>
+</body>
+</html>
